@@ -43,6 +43,9 @@ groceries = []
 
 main_menu = '''
 
+
+
+
 1. Print List
 2. Add Items
 3. Edit Items
@@ -60,5 +63,33 @@ while True:
 
     if menu_choice == 5:
         break
+
+    elif menu_choice == 1:
+        print(groceries)
+
+    elif menu_choice == 2:
+        while True:
+            item2 = input('What would you like to ADD? ')
+            if item2 == '':
+                break
+            else:
+                groceries.append(item2)
+
+    elif menu_choice == 3:
+        while True:
+            item3 = input('What would you like to EDIT? ')
+            print(groceries)
+            if item3 == '':
+                break
+            else:
+                break
+
+    elif menu_choice == 4:
+        while True:
+            item4 = input('What would you like to REMOVE? ')
+            if item4 == '':
+                break
+            else:
+                groceries.remove(item4)
 
 print('Thank you for using the grocery list app!')
